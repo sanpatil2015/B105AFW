@@ -6,3 +6,4 @@ class Test_Case1(BaseClass):
         data= Excel.get_data(self.XLPATH,'tc1',2,3)
         print("Excel data",data)
         print(self.driver.title)
+        print('Hi')
