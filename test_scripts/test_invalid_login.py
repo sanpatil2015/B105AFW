@@ -1,10 +1,12 @@
 from generic.base_class import BaseClass
 from generic.utility import Excel
 from page.login_page import LoginPage
+import pytest
 
 
 class Test_InvalidLogin(BaseClass):
 
+    @pytest.mark.run(order=1)
     def test_invalid_login(self):
         un = Excel.get_data(self.XLPATH, 'InvalidLogin', 2, 1)
         pw = Excel.get_data(self.XLPATH, 'InvalidLogin', 2, 2)

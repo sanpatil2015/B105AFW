@@ -2,8 +2,11 @@ from generic.base_class import BaseClass
 from generic.utility import Excel
 from page.login_page import LoginPage
 from page.home_page import HomePage
+import pytest
+
 class Test_ValidLogin(BaseClass):
 
+    @pytest.mark.run(order=2)
     def test_validlogin(self):
         #read data
             un = Excel.get_data(self.XLPATH, 'ValidLogin', 2, 1)
