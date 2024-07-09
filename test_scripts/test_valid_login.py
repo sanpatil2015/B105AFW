@@ -6,7 +6,7 @@ import pytest
 
 class Test_ValidLogin(BaseClass):
 
-    @pytest.mark.run(order=2)
+    @pytest.mark.run(order=1)
     def test_validlogin(self):
         #read data
             un = Excel.get_data(self.XLPATH, 'ValidLogin', 2, 1)
